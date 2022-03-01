@@ -1,0 +1,57 @@
+@import "variables";
+
+body, h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6, .p {
+  color: $dark !important;
+}
+
+.text-dark {
+  color: $dark !important;
+}
+
+.text-white {
+  color: $white !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.text-danger {
+  color: $danger !important;
+}
+
+.title {
+  padding-left: 15px;
+  border-left: 3px solid #f57c01;
+}
+
+.title-page {
+  padding-bottom: 10px;
+  border-bottom: 3px solid $dark;
+}
+
+.title-page.title-active {
+  border-bottom: 3px solid $primary;
+  color: $primary;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+label.required::after {
+  margin-left: 10px;
+  content: '✽';
+  color: $danger;
+  font-weight: normal;
+}
+
+.invalid-feedback {
+  text-align: left;
+}

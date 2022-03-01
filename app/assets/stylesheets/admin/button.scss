@@ -1,0 +1,58 @@
+@import "variables";
+
+.btn {
+  border-radius: 200px;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.btn-primary {
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle, .btn-primary:hover, .btn-primary:disabled {
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
+  opacity: 0.8;
+}
+
+.btn-primary:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary.active:not(:disabled):not(.disabled):focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #f7963480;
+}
+
+.btn-secondary {
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle, .btn-secondary:hover, .btn-secondary:disabled {
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
+  opacity: 0.8;
+}
+
+.btn-secondary:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary.active:not(:disabled):not(.disabled):focus, .show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #4a4a4a80;
+}
+
+.btn-danger {
+  color: $white;
+  background-color: $danger;
+  border-color: $danger;
+}
+
+.btn-danger:not(:disabled):not(.disabled).active, .btn-danger:not(:disabled):not(.disabled):active, .show>.btn-danger.dropdown-toggle, .btn-danger:hover, .btn-danger:disabled {
+  color: $white;
+  background-color: $danger;
+  border-color: $danger;
+  opacity: 0.8;
+}
+
+.btn-danger:focus, .btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger.active:not(:disabled):not(.disabled):focus, .show > .btn-danger.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #d2302f80;
+}

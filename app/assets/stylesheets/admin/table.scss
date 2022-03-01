@@ -1,0 +1,36 @@
+@import "variables";
+
+.table th, .table td {
+  border: 1px solid $white !important;
+  border-left: none !important;
+  border-top: none !important;
+  vertical-align: middle;
+  background-color: $gray;
+}
+
+.table th:last-of-type, .table td:last-of-type {
+  border-right: none !important;
+}
+
+.table tr:last-of-type td {
+  border-bottom: none !important;
+}
+
+.table .row, .table .d-flex {
+  align-items: center;
+}
+
+.table {
+  table-layout: fixed;
+}
+
+colgroup col.width-5 {width: 5%;}
+colgroup col.width-10 {width: 10%;}
+colgroup col.width-15 {width: 15%;}
+colgroup col.width-20 {width: 20%;}
+colgroup col.width-25 {width: 25%;}
+colgroup col.width-30 {width: 30%;}
+colgroup col.width-35 {width: 35%;}
+colgroup col.width-40 {width: 40%;}
+colgroup col.width-45 {width: 45%;}
+colgroup col.width-50 {width: 50%;}

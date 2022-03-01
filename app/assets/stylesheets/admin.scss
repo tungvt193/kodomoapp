@@ -1,0 +1,21 @@
+@import "admin/variables";
+@import "admin/button";
+@import "admin/text";
+@import "admin/background";
+@import "admin/layout";
+@import "admin/table";
+@import "admin/form";
+@import "admin/manage_work";
+@import "application";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: $white;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  overflow-x: hidden;
+}
+
