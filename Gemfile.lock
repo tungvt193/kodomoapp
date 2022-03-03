@@ -71,6 +71,7 @@ GEM
     autoprefixer-rails (10.4.2.0)
       execjs (~> 2)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.10.3)
       msgpack (~> 1.2)
@@ -169,6 +170,7 @@ GEM
       dry-core (~> 0.5, >= 0.5)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.8, >= 1.8.0)
+    ed25519 (1.3.0)
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.5)
@@ -378,6 +380,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   annotate
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5.2)
   bootstrap-kaminari-views
@@ -392,6 +395,7 @@ DEPENDENCIES
   config
   devise
   dotenv-rails
+  ed25519 (>= 1.2, < 2.0)
   grape
   grape-active_model_serializers
   grape-swagger
@@ -401,6 +405,7 @@ DEPENDENCIES
   jwt
   kaminari
   listen (~> 3.2)
+  net-ssh (>= 6.0.2)
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 4.1)

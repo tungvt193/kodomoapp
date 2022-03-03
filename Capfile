@@ -3,6 +3,9 @@ require "capistrano/setup"
 
 # Include default deployment tasks
 require "capistrano/deploy"
+require 'capistrano/bundler' # Rails needs Bundler, right?
+require 'capistrano/rails/migrations'
+
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -12,6 +15,12 @@ require "capistrano/deploy"
 # require "capistrano/scm/svn"
 # install_plugin Capistrano::SCM::Svn
 # or
+require 'capistrano/rvm'
+require 'capistrano/puma'
+install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Daemon
+install_plugin Capistrano::Puma, load_hooks: true
+
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
