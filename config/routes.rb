@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount ApplicationApi, at: "/"
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }

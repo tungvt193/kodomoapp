@@ -42,6 +42,15 @@ gem 'active_model_serializers'
 gem 'devise'
 gem 'jwt'
 
+# grape API
+gem 'grape'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'grape-active_model_serializers'
+gem 'grape_on_rails_routes'
+gem 'grape-swagger'
+
+gem 'pry-rails', :group => :development
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
