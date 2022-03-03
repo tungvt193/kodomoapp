@@ -26,4 +26,24 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  ## Callbacks
+  before_save do
+    self.email = email.downcase if email_changed?
+  end
+
+  def generate_token
+    payload = {
+      user_id: id,
+      expiry: DateTime.now + ENV['TOKEN_LIFE'].to_i.days
+    }
+    JWT.encode payload, ENV['HMAC_SECRET'], 'HS256'
+  end
+
+  def self.decode_token(token)
+    body = JWT.decode(token, ENV['HMAC_SECRET'], 'HS256')[0]
+    HashWithIndifferentAccess.new body
+  rescue JWT::ExpiredSignature, JWT::VerificationError => e
+    raise ExceptionHandler::ExpiredSignature, e.message
+  end
 end
