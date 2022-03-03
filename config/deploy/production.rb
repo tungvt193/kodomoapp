@@ -24,7 +24,7 @@
 set :stage, :production
 set :rails_env, :production
 set :deploy_to, "/home/kodomo/kodomo_api"
-set :branch, :main
+set :branch, "feature/add_capistano"
 server "52.221.188.217", user: "kodomo", roles: %w(web app db)
 
 # Configuration
