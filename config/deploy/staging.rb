@@ -59,3 +59,10 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+
+set :stage, :staging
+set :rails_env, :production
+set :deploy_to, "/home/kodomo/kodomo_api"
+set :branch, "develop"
+server "118.70.161.162", user: "kodomo", roles: %w(web app db), port: 2029
